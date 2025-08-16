@@ -1,0 +1,39 @@
+ <!-- Home Section -->
+    <section id="home" class="hero">
+        <img src="FOTO.JPG.jpg" alt="Foto Profil">
+        <div class="hero-text">
+            <h1>Halo, Saya <span>Eka Ayu Oktaviani</span></h1>
+            <p>Saya adalah seorang pelajar yg masih belajar untuk meningkaykan keahlian saya dalam mendalami ilmu IT
+            serta ilmu qoding.</p>
+           
+        </div>
+    </section>
+  
+   <html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animasi Judul</title>
+<style>
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
+  .judul-animasi {
+    font-size: 40px;
+    font-weight: 800;
+    background: linear-gradient(90deg, #7c3aed, #06b6d4, #7c3aed);
+    background-size: 200% auto;
+    -webkit-text-fill-color: transparent;
+    animation: fadeUp 1s ease-out forwards, gradientMove 3s linear infinite;
+    display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+<h1 class="judul-animasi">Halo, Saya Nama Anda</h1>

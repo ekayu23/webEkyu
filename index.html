@@ -1,0 +1,62 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portofolio — Nama Anda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="">
+  <meta name="description" content="Portofolio kreatif — nama Anda. Desainer & developer front-end.">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">YA</div>
+        <div>
+          <h1>Nama Anda</h1>
+          <p>Front-end Developer • UI/UX Enthusiast</p>
+        </div>
+      </div>
+      <nav aria-label="Navigasi">
+        <button class="nav-btn">Home</button>
+        <button class="nav-btn">Projects</button>
+        <button class="nav-btn">About</button>
+        <button class="nav-btn">Contact</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- hero section -->
+      <!-- ... isi hero section seperti sebelumnya ... -->
+
+      <!-- projects section -->
+      <!-- ... isi projects section seperti sebelumnya ... -->
+
+      <!-- about section -->
+      <!-- ... isi about section seperti sebelumnya ... -->
+
+      <!-- contact section -->
+      <!-- ... isi contact section seperti sebelumnya ... -->
+    </main>
+
+    <footer>
+      © <span id="year"></span> Nama Anda — Dibuat dengan ❤️ • Built for performance.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.querySelectorAll('nav button, a[href^="#"]').forEach(el=>{
+      el.addEventListener('click', (e)=>{
+        const href = (el.getAttribute('href')||'').replace(/^#/, '');
+        if(href){
+          e.preventDefault();
+          document.getElementById(href)?.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      })
+    })
+  </script>
+</body>
+</html>
